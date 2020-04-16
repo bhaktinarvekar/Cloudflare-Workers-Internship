@@ -1,0 +1,6 @@
+name = "intern_project"
+type = "javascript"
+account_id = "d80f39b75c8b2917f84263d44567cc18"
+workers_dev = true
+route = ""
+zone_id = ""
