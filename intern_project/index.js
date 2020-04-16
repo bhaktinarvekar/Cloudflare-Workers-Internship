@@ -2,11 +2,9 @@ const URL = "https://cfw-takehome.developers.workers.dev/api/variants";
 const Cookie_name = "variant"
 var random;
 
-
 addEventListener('fetch', event => {
   event.respondWith(handleRequest(event.request))
 });
-
 
 var val;
 async function handleRequest(request) 
@@ -31,11 +29,7 @@ async function handleRequest(request)
     randomUrl = new Response(randomUrl.body, randomUrl);
     randomUrl.headers.append('Set-Cookie', `${Cookie_name}=${String(random)}; Path='/';`);
   }
-  
-    
    return rewrite(randomUrl, random); 
-  
-
 }
 
 class WorkerTitle
@@ -85,7 +79,6 @@ function getCookie(request, name)
       let cookieName = c.split("=")[0].trim();
       if(cookieName == name)
       {
-        
         result = c.split("=")[1].trim();
       }
     });
